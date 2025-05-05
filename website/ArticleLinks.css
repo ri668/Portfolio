@@ -1,0 +1,20 @@
+
+.icyy a:link {
+    color: rgb(105, 51, 204);
+    text-decoration: underline;
+}
+
+.icyy a:visited {
+    color: rgb(30, 184, 125);
+    text-decoration: line-through;
+}
+
+.icyy a:hover {
+    color: rgb(121, 13, 143);
+    text-decoration: blink;
+}
+
+.icyy a:active {
+    color: rgb(8, 165, 185);
+    text-decoration: overline;
+}

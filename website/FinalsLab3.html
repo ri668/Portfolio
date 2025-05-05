@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FinalsLab3</title>
+     <script type="text/javascript">
+        function calculate(){
+            var num = parseFloat(document.getElementById("num").value);
+            var answer = num * 100000;
+            document.getElementById("result").innerHTML = num + " KILOMETER is " + answer +" cm." ;
+        }
+     </script>
+
+<body>
+    <div id="content">
+    <div style="padding: 20px 20px 20px; border: solid; margin-right: 80%;">
+    <input type="text" id="num" placeholder="ENTER A NUMBER"><button onclick="calculate();">Submit</button>
+</div>
+    <div id="result"></div>
+</div>
+</body>
+</html>

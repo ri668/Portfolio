@@ -1,0 +1,41 @@
+ol{
+    font-family: Arial;
+    font-size: 15px;
+}
+
+.headers{
+    color: rgb(109, 38, 38);
+    font-weight: bold;
+}
+
+#underline{
+    text-decoration: underline;
+}
+
+.color1{
+    color: rgb(0, 82, 68);
+    list-style-type: square;
+}
+
+.color2{
+    color:rgb(62, 11, 107);
+    list-style-type: circle;
+}
+
+.color3{
+    color:rgb(77, 8, 8);
+}
+
+.color4{
+    color:rgb(26, 71, 47);
+    list-style-type: square;
+}
+ 
+.color5{
+    color: rgb(181, 0, 0);
+    list-style-type: circle;
+}
+
+#color6{
+    color:rgb(185, 192, 0);
+}
