@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Rieci's Website</title>
+
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <title>Card with PDF Link</title>
+  <link rel="stylesheet" href="style.css">
+       
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    </head>
+    <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="70" tabindex="0">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">PORTFOLIO</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <button class="btn btn-sm btn-outline-dark ms-3" id="modeToggle">🌙</button>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead" id="home">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">
+                            <span id="typed-text"></span>
+                          </h1>                          
+                    </div>
+                    <div class="col-lg-8 align-self-baseline"><br></br>
+                        <br></br>
+                        <br></br>
+                        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+                    </div>
+                </div>
+            </div>
+        </header>              
+        <section class="page-section" id="about" style="background-color: #2c3e50;"> 
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Welcome to my portfolio!</h2>
+                        <hr class="divider divider-light" />
+                        <p class="text-white-75 mb-4">This academic portfolio showcases my journey in web development and design. It includes a selection of my projects, skills in HTML, CSS, JavaScript, and Bootstrap, and highlights my creative and technical growth. Whether you're an instructor, peer, or potential collaborator, I invite you to explore my work and connect with me for future opportunities.</p>
+                        <a class="btn btn-light btn-xl" href="#skills">Get Started!</a>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <div class="background">
+        <section class="page-section bg-light" id="skills">
+            <div class="container px-4 px-lg-5">
+                <h2 class="text-center mt-0">Skills</h2>
+                <hr class="divider" />
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <h5>HTML</h5>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 90%;">90%</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h5>CSS</h5>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 85%;">85%</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h5>JavaScript</h5>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;">75%</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h5>Bootstrap</h5>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;">80%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>       
+<section id="portfolio">
+    <div class="container">
+        <!-- Filter Dropdown -->
+        <div class="text-center my-5">
+            <label for="categoryFilter" class="form-label">Sort by Category:</label>
+            <select id="categoryFilter" class="form-select w-25 mx-auto" onchange="filterProjects()">
+                <option value="all">All</option>
+                <option value="prelims">First Grading</option>
+                <option value="midterms">Midterms</option>
+                <option value="finals">Finals</option>
+                <option value="Lecture Portfolio">Lecture Portfolio</option>
+            </select>
+        </div>
+        <!-- Prelims Section -->
+        <div class="row g-0">
+            <div class="col-lg-4 col-sm-6 project prelims">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Prelims/Exercise.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Prelims/Exercise.png" alt="Prelim 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">First Grading</div>
+                        <div class="project-name"><a href="website/LabExercise1.html" target="_blank">EXERCISE 1</a></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 project prelims">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Prelims/prelims.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Prelims/prelims.png" alt="Prelim 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">First Grading</div>
+                        <div class="project-name"><a href="website/LabExercise2.html" target="_blank">EXERCISE 2</a></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 project prelims">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Prelims/Exercise3.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Prelims/Exercise3.png" alt="Prelim 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">First Grading</div>
+                        <div class="project-name"><a href="website/LabExercise3.html" target="_blank">EXERCISE 3</a></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 project prelims">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Prelims/Exercise4.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Prelims/Exercise4.png" alt="Prelim 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">First Grading</div>
+                        <div class="project-name"><a href="website/LabExercise4.html" target="_blank">EXERCISE 4</a></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 project prelims">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Prelims/Exercise5.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Prelims/Exercise5.png" alt="Prelim 1"/>
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">First Grading</div>
+                        <div class="project-name"><a href="website/LabExercise5.html" target="_blank">EXERCISE 5</a></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 project prelims">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Prelims/Exercise6.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Prelims/Exercise6.png" alt="Prelim 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">First Grading</div>
+                        <div class="project-name"><a href="website/LabExercise6.html" target="_blank">EXERCISE 6</a></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 project prelims">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Prelims/Exercise7.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Prelims/Exercise7.png" alt="Prelim 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">First Grading</div>
+                        <div class="project-name"><a href="website/LabExercise7.html" target="_blank">EXERCISE 7</a></div>
+                    </div>
+                </a>
+            </div>
+            <!-- Add more Prelims projects as needed -->
+        </div>
+
+        <!-- Midterms Section -->
+        <div class="row g-0">
+            <div class="col-lg-4 col-sm-6 project midterms">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Midterms/MidtermCss1.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Midterms/MidtermCss1.png" alt="Midterm 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">Midterms</div>
+                        <div class="project-name"><a href="website/ExerciseCSS1.html" target="_blank">EXERCISE CSS 1</a></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 project midterms">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Midterms/MidtermCss2a.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Midterms/MidtermCss2a.png" alt="Midterm 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">Midterms</div>
+                        <div class="project-name"><a href="website/ExerciseCSS2a.html" target="_blank">EXERCISE CSS 2a</a></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 project midterms">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Midterms/MidtermCss2b.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Midterms/MidtermCss2b.png" alt="Midterm 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">Midterms</div>
+                        <div class="project-name"><a href="website/ExerciseCSS2b.html" target="_blank">EXERCISE 2b</a></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 project midterms">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Midterms/MidtermCss3.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Midterms/MidtermCss3.png" alt="Midterm 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">Midterms</div>
+                        <div class="project-name"><a href="website/ExerciseCSS3.html" target="_blank">EXERCISE 3</a></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 project midterms">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Midterms/MidtermCss4.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Midterms/MidtermCss4.png" alt="Midterm 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">Midterms</div>
+                        <div class="project-name"><a href="website/ExerciseCSS4A.html" target="_blank">EXERCISE 4</a></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 project midterms">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Midterms/MidtermCss5a.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Midterms/MidtermCss5a.png" alt="Midterm 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">Midterms</div>
+                        <div class="project-name"><a href="website/ExerciseCSS5a.html" target="_blank">EXERCISE 5a</a></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 project midterms">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Midterms/MidtermCss5b.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Midterms/MidtermCss5b.png" alt="Midterm 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">Midterms</div>
+                        <div class="project-name"><a href="website/ExerciseCSS5b.html" target="_blank">EXERCISE 5b</a></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 project midterms">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Midterms/MidtermCss6.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Midterms/MidtermCss6.png" alt="Midterm 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">Midterms</div>
+                        <div class="project-name"><a href="website/ExerciseCSS6.html" target="_blank">EXERCISE 6</a></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Finals Section -->
+        <div class="row g-0">
+            <div class="col-lg-4 col-sm-6 project finals">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Finals/FinalsLab1.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Finals/FinalsLab1.png" alt="Final 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">Finals</div>
+                        <div class="project-name"><a href="website/Java.html" target="_blank">EXERCISE 1</a></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 project finals">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Finals/FinalsLab2.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Finals/FinalsLab2.png" alt="Final 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">Finals</div>
+                        <div class="project-name"><a href="website/FinalsLab2.html" target="_blank">EXERCISE 2</a></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 project finals">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Finals/FinalsLab3.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Finals/FinalsLab3.png" alt="Final 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">Finals</div>
+                        <div class="project-name"><a href="website/FinalsLab3.html" target="_blank">EXERCISE 3</a></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 project finals">
+                <a class="portfolio-box" href="assets/img/portfolio/fullsize/Finals/FinalsLab4.png">
+                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/Finals/FinalsLab4.png" alt="Final 1" />
+                    <div class="portfolio-box-caption">
+                        <div class="project-category text-white-50">Finals</div>
+                        <div class="project-name"><a href="website/FinalsLab4.html" target="_blank">EXERCISE 4</a></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+<section id="portfolio" class="portfolio">
+<hr class="divider" />
+<div class="row justify-content-center">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+            <div class="card-body text-center">
+                <h5 class="card-title">Lecture Portfolio</h5>
+                <p class="card-text">Overview of HTML basics and structure.</p>
+                <a href="assets/Humcom-Portfolio.pdf" target="_blank" class="btn btn-outline-primary">
+                    View PDF
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6 text-center">
+                        <h2 class="mt-0">Let's Get In Touch!</h2>
+                        <hr class="divider" />
+                        <p class="text-muted mb-5">If you'd like to learn more about any of the projects in my portfolio or have questions about my research and skills, don't hesitate to reach out. I'm happy to provide additional details or discuss how I can contribute to your academic or professional goals. Send us a messages and we will get back to you as soon as possible!</p>
+                    </div>
+                </div>
+                
+                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                    <div class="col-lg-6">
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Full name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <!-- Phone number input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <label for="phone">Phone number</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Message</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    Sign up to connect at
+                                    <br />
+                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScDCsUtL9nhXMUbeSBLl950dxGsMD2UG7yGYyZ0ljSCsbC8Rg/viewform?usp=dialog" target="_blank">https://docs.google.com/forms</a>
+                                </div>
+                            </div>
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            <!-- Submit Button-->
+                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
+                        <div>+63 965-630-4996</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+        <!-- Footer-->
+        <footer class="bg-light py-5">  
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2025 - Rieci's Website</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+        <button onclick="topFunction()" id="backToTopBtn" title="Go to top" class="btn btn-primary rounded-circle">↑</button>
+
+<style>
+    #backToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 40px;
+        right: 40px; 
+        z-index: 99;
+        font-size: 16px; 
+        padding: 8px 12px; 
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 20px;
+    }
+</style>
+
+<script>
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    window.onscroll = function () {
+        backToTopBtn.style.display =
+            (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100)
+                ? "block"
+                : "none";
+    };
+
+    function topFunction() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+</script>
+
+<script>
+    const modeToggle = document.getElementById("modeToggle");
+
+    // Load stored theme preference
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+        modeToggle.textContent = "☀️";
+    }
+
+    modeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            modeToggle.textContent = "☀️";
+        } else {
+            localStorage.setItem("theme", "light");
+            modeToggle.textContent = "🌙";
+        }
+    });
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var typed = new Typed("#typed-text", {
+      strings: ["HELLO!", "Welcome to my portfolio!", "Let's build something great together."],
+      typeSpeed: 50,
+      backSpeed: 25,
+      backDelay: 2000,
+      loop: true
+    });
+</script> 
+  <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+
+        <script>
+            function filterProjects() {
+                const category = document.getElementById("categoryFilter").value;
+                const projects = document.querySelectorAll(".project");
+
+                projects.forEach(project => {
+                    if (category === "all") {
+                        project.style.display = "block";
+                    } else {
+                        if (project.classList.contains(category)) {
+                            project.style.display = "block";
+                        } else {
+                            project.style.display = "none";
+                        }
+                    }
+                });
+            }
+  </script>         
+    </body>
+</html>
